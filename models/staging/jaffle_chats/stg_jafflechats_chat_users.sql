@@ -7,14 +7,19 @@ with source as (
 renamed as (
 
     select
-        id,
-        customertypeid,
-        _profile_id_,
-        firstname,
+        -- ids
+        id as chat_user_id,
+        customertypeid as customer_type_id,
+        _profile_id_ as profile_id,
+        
+        -- varchar
+        firstname as first_name,
         last_name,
         email,
         ip_address,
-        created
+
+        -- timestamps
+        created::timestamp_ntz as created_at
 
     from source
 

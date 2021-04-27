@@ -8,8 +8,18 @@ with source as (
 renamed as (
 
     select
-        id,
-        kind,
+        -- ids
+        id as product_id,
+        
+        -- varchars
+        kind as flavor,
+        case
+            when flavor in ('chocolate', 'strawberry')
+                then 'Sweet'
+            else 'Savory'
+        end flavor_category,
+        
+        --boolean
         active
 
     from source
