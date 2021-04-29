@@ -2,6 +2,8 @@ version: 2
 
 sources:
   - name: jaffle_chats
+    database: raw
+    schema: jaffle_chats
     tables:
       - name: chats
       - name: chatusers

@@ -15,7 +15,6 @@ renamed as (
         ended,
         category,
         created_timestamp,
-        flavor,
         users
 
     from source
