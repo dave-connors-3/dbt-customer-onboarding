@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_jafflechats_users
+    description: One record per jaffle chat user
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_jafflechats_chats
+    description: One record per jaffle chat chat
+    columns:
+      - name: chat_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_jafflechats_products
+    description: One record per jaffle chat product
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
